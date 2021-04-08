@@ -23,6 +23,10 @@ if(isset($_POST['retornaFormularioDeuda'])){
         header("Location: ../vistasAdministrador/modificarTratamiento.php");
         //echo "entre por el 6";
     }
+    else if($_POST['opcion']==7){
+        header("Location: ../vistasAdministrador/eliminarTramiento.php");
+        //echo "entre por el 7";
+    }
 }
 else{
     if(isset($_POST['tipoDeudaRegistrar'])){

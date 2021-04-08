@@ -336,6 +336,7 @@ session_start();
                                         <option value="2">Ingresar el tratamiento</option>
                                         <option value="5">Listar tratamientos</option>
                                         <option value="6">Modificar tratamientos</option>
+                                        <option value="7">Eliminar tratamientos</option>
                                     </select>
                                 </td>
                             </tr>
