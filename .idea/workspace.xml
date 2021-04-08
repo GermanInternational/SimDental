@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ce6581d4-57a4-4eff-b3b7-12c875e1f47f" name="Default Changelist" comment="Primer git">
+      <change afterPath="$PROJECT_DIR$/vistasAdministrador/eliminarUsuariosConTratamiento.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistasAdministrador/formularioModificarPlan.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistasAdministrador/listarPlanes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistasAdministrador/modificarPlan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/formulario.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/formulario.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/Administrador.php" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/Administrador.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistasAdministrador/formularioModificarUsuarios.php" beforeDir="false" afterPath="$PROJECT_DIR$/vistasAdministrador/formularioModificarUsuarios.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistasAdministrador/indexDeuda.php" beforeDir="false" afterPath="$PROJECT_DIR$/vistasAdministrador/indexDeuda.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistasAdministrador/listarUsuarios.php" beforeDir="false" afterPath="$PROJECT_DIR$/vistasAdministrador/listarUsuarios.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistasAdministrador/opcionDeuda.php" beforeDir="false" afterPath="$PROJECT_DIR$/vistasAdministrador/opcionDeuda.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistasAdministrador/opcionUsuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/vistasAdministrador/opcionUsuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistasAdministrador/registrarDeuda.php" beforeDir="false" afterPath="$PROJECT_DIR$/vistasAdministrador/registrarDeuda.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistasAdministrador/registrarTramientoDeuda.php" beforeDir="false" afterPath="$PROJECT_DIR$/vistasAdministrador/registrarTramientoDeuda.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistasAdministrador/registrarTramientoDeudaConExito.php" beforeDir="false" afterPath="$PROJECT_DIR$/vistasAdministrador/registrarTramientoDeudaConExito.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistasAdministrador/registrarUsuarioConExito.php" beforeDir="false" afterPath="$PROJECT_DIR$/vistasAdministrador/registrarUsuarioConExito.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistasAdministrador/registrarUsuarios.php" beforeDir="false" afterPath="$PROJECT_DIR$/vistasAdministrador/registrarUsuarios.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/formulario.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vistasAdministrador/opcionDeuda.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="34" column="117" selection-start-line="34" selection-start-column="117" selection-end-line="34" selection-end-column="117" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libreria/Administrador.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="167" column="23" selection-start-line="167" selection-start-column="23" selection-end-line="167" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>about</find>
+      <find>selecc</find>
+      <find>formularioTipoDeuda</find>
+      <find>doc</find>
+      <find>registrarPlan</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/libreria/claseValidar.php" />
+        <option value="$PROJECT_DIR$/libreria/ClassValidator.php" />
+        <option value="$PROJECT_DIR$/libreria/.php" />
+        <option value="$PROJECT_DIR$/Conexion/Conexion.php" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/logout.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/servicioAdministrador.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/opcion.php" />
+        <option value="$PROJECT_DIR$/libreria/Metodo.php" />
+        <option value="$PROJECT_DIR$/sesionInactivo.html" />
+        <option value="$PROJECT_DIR$/libreria/validar.php" />
+        <option value="$PROJECT_DIR$/about.html" />
+        <option value="$PROJECT_DIR$/sesion.html" />
+        <option value="$PROJECT_DIR$/sesionError.html" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/indexAdministrador.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/modificarUsuarios.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/eliminarUsuarios.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/registrarDeudaConExito.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/usuarioAdministrador.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/registrarTramientoDeuda.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/registrarTramientoDeudaConExito.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/eliminarUsuariosConTratamiento.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/registrarUsuarios.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/registrarUsuarioConExito.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/listarUsuarios.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/opcionUsuario.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/listarPlanes.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/indexDeuda.php" />
+        <option value="$PROJECT_DIR$/js/formulario.js" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/registrarDeuda.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/modificarPlan.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/formularioModificarUsuarios.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/formularioModificarPlan.php" />
+        <option value="$PROJECT_DIR$/vistasAdministrador/opcionDeuda.php" />
+        <option value="$PROJECT_DIR$/libreria/Administrador.php" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="prodent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prodent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prodent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prodent" type="462c0819:PsiDirectoryNode" />
+              <item name="libreria" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prodent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prodent" type="462c0819:PsiDirectoryNode" />
+              <item name="vistasAdministrador" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vistasAdministrador" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\prodent\vistasAdministrador" />
+      <recent name="C:\wamp64\www\prodent" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce6581d4-57a4-4eff-b3b7-12c875e1f47f" name="Default Changelist" comment="" />
+      <created>1567560713421</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567560713421</updated>
+      <workItem from="1567560729938" duration="705000" />
+      <workItem from="1567960916830" duration="3661000" />
+      <workItem from="1567977244585" duration="696000" />
+      <workItem from="1567990457816" duration="4858000" />
+      <workItem from="1568484664255" duration="5400000" />
+      <workItem from="1568512362952" duration="3598000" />
+      <workItem from="1568554078251" duration="17533000" />
+      <workItem from="1568592347968" duration="9022000" />
+      <workItem from="1568633165400" duration="3829000" />
+      <workItem from="1568674107125" duration="9925000" />
+      <workItem from="1568769658863" duration="4887000" />
+      <workItem from="1568858111142" duration="122000" />
+      <workItem from="1568858582857" duration="1685000" />
+      <workItem from="1568944782289" duration="6396000" />
+      <workItem from="1569031197299" duration="8701000" />
+      <workItem from="1569070465282" duration="4813000" />
+      <workItem from="1569085634529" duration="3433000" />
+      <workItem from="1569201957278" duration="7795000" />
+      <workItem from="1569251149545" duration="4283000" />
+      <workItem from="1569337158106" duration="11293000" />
+      <workItem from="1569381488488" duration="3811000" />
+    </task>
+    <task id="LOCAL-00001" summary="Primer git">
+      <created>1568773898038</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568773898038</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="116446000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27458397" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32993197" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32993197" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primer git" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer git" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/elements.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1683" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libreria/claseValidar.php" />
+    <entry file="file://$PROJECT_DIR$/libreria/ClassValidator.php" />
+    <entry file="file://$PROJECT_DIR$/libreria/Metodo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sesionInactivo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="367" column="62" selection-start-line="367" selection-start-column="62" selection-end-line="367" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libreria/validar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2684">
+          <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sesionError.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="40" column="72" selection-start-line="40" selection-start-column="72" selection-end-line="40" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sesion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="41" column="71" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/registrarDeudaConExito.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="336" column="86" selection-start-line="336" selection-start-column="86" selection-end-line="336" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/indexAdministrador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6290">
+          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/usuarioAdministrador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="347" column="66" selection-start-line="347" selection-start-column="49" selection-end-line="347" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/modificarUsuarios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="348" column="53" lean-forward="true" selection-start-line="348" selection-start-column="53" selection-end-line="348" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Conexion/Conexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/eliminarUsuariosConTratamiento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="541" column="82" selection-start-line="541" selection-start-column="82" selection-end-line="541" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/eliminarUsuarios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="56" column="66" selection-start-line="56" selection-start-column="66" selection-end-line="56" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/registrarTramientoDeudaConExito.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="338" column="54" selection-start-line="338" selection-start-column="49" selection-end-line="338" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/registrarUsuarioConExito.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="515" column="40" selection-start-line="515" selection-start-column="40" selection-end-line="515" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/listarUsuarios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="374" column="59" selection-start-line="374" selection-start-column="59" selection-end-line="374" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/registrarUsuarios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="341" column="75" lean-forward="true" selection-start-line="339" selection-start-column="28" selection-end-line="341" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/listarPlanes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4811">
+          <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/registrarTramientoDeuda.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5780">
+          <caret line="340" column="26" lean-forward="true" selection-start-line="336" selection-start-column="20" selection-end-line="340" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/registrarDeuda.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="341" column="69" selection-start-line="341" selection-start-column="69" selection-end-line="341" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/opcionUsuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="56" column="148" selection-start-line="56" selection-start-column="148" selection-end-line="56" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/indexDeuda.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="348" column="119" selection-start-line="348" selection-start-column="119" selection-end-line="348" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/formulario.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/formularioModificarUsuarios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="55" column="30" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/modificarPlan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="348" column="81" selection-start-line="348" selection-start-column="75" selection-end-line="348" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/formularioModificarPlan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="346" column="87" selection-start-line="346" selection-start-column="87" selection-end-line="346" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libreria/Administrador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="167" column="23" selection-start-line="167" selection-start-column="23" selection-end-line="167" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistasAdministrador/opcionDeuda.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="34" column="117" selection-start-line="34" selection-start-column="117" selection-end-line="34" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
