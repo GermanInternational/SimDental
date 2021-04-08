@@ -210,4 +210,43 @@ class Administrador
        $rows = $sql->fetchAll(PDO::FETCH_ASSOC);
        return $rows;
     }
+
+    public function listarUsuarioConId($User_idUser){
+       $bd = new Conexion();
+       $sql= $bd->prepare("SELECT `idUser`, `name`, `last_name`, `birth_date`, `address`, `City`, `phone`, `type_document`, `document`, `password`, `rol`, `status` FROM `user` where `idUser` = '$User_idUser'");
+       $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       $sql->execute(array());
+       $rows = $sql->fetchAll(PDO::FETCH_ASSOC);
+       return $rows;
+   }
+
+   public function listarDoctoresConId($Doctor_idDoctor){
+       $bd = new Conexion();
+       $sql = $bd->prepare("SELECT `user`.`name`, `user`.`last_name` FROM `doctor` INNER JOIN `user`ON `doctor`.`fk_user` = `user`.`idUser` WHERE `doctor`.`idDoctor` = '$Doctor_idDoctor'");
+       $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       $sql->execute(array());
+       $rows = $sql->fetchAll(PDO::FETCH_ASSOC);
+       return $rows;
+   }
+
+    public function listaTipoTramiento($type_debt_idtype_debt){
+       $bd = new Conexion();
+       $sql = $bd->prepare("SELECT `name` FROM `type_debt` WHERE `idtype_debt` = '$type_debt_idtype_debt'");
+       $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       $sql->execute(array());
+       $rows = $sql->fetchAll(PDO::FETCH_ASSOC);
+       return $rows;
+   }
+
+    public function eliminarTramiento($idTratamiento){
+       $bd = new Conexion();
+       $sql = $bd->prepare("DELETE FROM `dental_treatment` WHERE `idDental_treatment` = '$idTratamiento'");
+       $ok = $sql->execute();
+       if($ok){
+           return true;
+       }
+       else{
+           return false;
+       }
+   }
 }

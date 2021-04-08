@@ -51,10 +51,12 @@ else{
                 header("Location: ../vistasAdministrador/formularioModificarPlan.php?user=".$_POST['idUser']);
             }
         }
-        
-
-
-    }
+        else if ($_POST['tipoPlan']=='eliminarTratamiento'){
+            //echo $_POST['idUser'];
+            $administrador->eliminarTramiento($_POST['idUser']);
+            header("Location: ../vistasAdministrador/eliminarTramiento.php");
+        }
+    }  
     else{
         //echo "entre en el insertar tratamiento ";
         $idTratamiento = $administrador->insertarTramiento($_POST['nombre'], $_POST['descripcion'], $_POST['opcionCliente'], $_POST['opcionTipoPlan'], $_POST['opcionDoctor'], $_POST['exampleInputestado']);
@@ -68,3 +70,4 @@ else{
         }
     }
 }
+

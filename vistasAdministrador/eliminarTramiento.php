@@ -1,5 +1,6 @@
 <?php
 session_start();
+include '../libreria/Administrador.php';
 ?>
 
 <!DOCTYPE html>
@@ -52,8 +53,8 @@ session_start();
 			<!-- Main Menu -->
 			<ul class="main-menu">
 				<li><a href="indexAdministrador.php">Incio</a></li>
-				<li class="active"><a href="usuarioAdministrador.php">Usuario</a></li>
-                <li><a href="indexDeuda.php">Accion deuda</a></li>
+				<li><a href="usuarioAdministrador.php">Usuario</a></li>
+                <li class="active"><a href="indexDeuda.php">Accion deuda</a></li>
                 <li><a href="logout.php">Cerrar Sesion</a></li>
                 <?php
                     if (!isset($_SESSION["nombre"])){
@@ -118,7 +119,7 @@ session_start();
 					<div class="row">
 						<div class="col-xl-7">
 							<h2>Bienvenido Administrador</h2>
-							<p>Administrador <?php echo $_SESSION["nombre"] ?></p>
+							<p>Administrador <?php echo $_SESSION["nombre"]; ?></p>
 						</div>
 					</div>
 				</div>
@@ -318,35 +319,113 @@ session_start();
 	<section class="testimonials-section spad">
 		<div class="container">
 			<div class="section-title text-center">
-				<h2>Selecciones el proceso que quiere realizar</h2>
+				<h2>Lista de usuarios en la base de datos</h2>
 			</div>
 		</div>
 		<div class="testimonials-warp">
             <div class="ts-content">
                 <div align="center">
-                    <form method="post" name="formInicio">
-                        <table>
-                            <tr>
-                                <td>
-                                    <select  class="form-control" name="opcion" id="opcion">
-                                        <option value="Seleccion">Seleccion</option>
-                                        <option value="1">Ingresar nuevo usuario</option>
-                                        <option value="2">Listar usuarios existentes</option>
-                                        <option value="3">Modificar usuario</option>
-                                        <option value="4">Eliminar usuario</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <br>
-                                    <button type="button" class="btn btn-primary" onclick="formularioUsuario();">Ingresar</button>
-                                    <!--<input type="submit" class="btn btn-primary" value="Ingresar">-->
-                                </td>
-                            </tr>
-                        </table>
-                        <input type="hidden" id="retornaFormulario" name="retornaFormulario" value="">
-                    </form>
+                <?php
+                    $administrador = new Administrador();
+                    $rows = $administrador->listarTratamiento();
+                    echo '<form action="opcionDeuda.php" method="post">';
+                    echo '<table class="table">';
+                            echo '<tr>';
+                                echo '<td>';
+                                    echo 'Seleccion';
+                                echo '</td>';
+                                echo '<td>';
+                                    echo 'Nombre';
+                                echo '</td>';
+                                echo '<td>';
+                                    echo 'Estado';
+                                echo '</td>';
+                                echo '<td>';
+                                    echo 'Descripcion';
+                                echo '</td>';
+                                echo '<td>';
+                                    echo 'Usuario';
+                                echo '</td>';
+                                echo '<td>';
+                                    echo 'Doctor';
+                                echo '</td>';
+                                echo '<td>';
+                                    echo 'Nombre tramiento';
+                                echo '</td>';
+                            foreach ($rows as $row) {
+                                $idUser = $row['idDental_treatment'];
+                                echo '<tr>';
+                                    echo '<td>';
+                                        echo "<input type='checkbox' name='idUser' class='form-check-input' id='exampleCheck1' value='$idUser'>";
+                                     echo "<input type='hidden' id='tipoDeudaRegistrar' name='tipoDeudaRegistrar' value=''>";
+                					echo "<input type='hidden' name='tipoPlan' value='eliminarTratamiento'>";
+                                    echo '</td>';
+                                    echo '<td>';
+                                        echo $row['name'];
+                                    echo '</td>';
+                                    echo '<td>';
+                                        if($row['status'] == 1){
+                                            echo 'Activo';
+                                        }
+                                        elseif($row['status'] == 2){
+                                            echo 'Inactivo';
+                                        }
+                                        else{
+                                            echo 'Terminado';
+                                        }
+                                    echo '</td>';
+                                    echo '<td>';
+                                        echo $row['description'];
+                                    echo '</td>';
+                                    echo '<td>';
+                                    	$rows1 = $administrador->listarUsuarioConId($row['User_idUser']);
+                                    	foreach ($rows1 as $row1){
+                                    		echo $row1['name'].''.$row1['last_name'];
+                                    	}
+                                    echo '</td>';
+                                    echo '<td>';
+                                        $rows2 = $administrador->listarDoctoresConId($row['Doctor_idDoctor']);
+                                    	foreach ($rows2 as $row2){
+                                    		echo $row2['name'].''.$row2['last_name'];
+                                    	}
+                                    echo '</td>';
+                                     echo '<td>';
+                                        //echo $row['type_debt_idtype_debt'];
+                                         $rows3 = $administrador->listaTipoTramiento($row['type_debt_idtype_debt']);
+                                    	foreach ($rows3 as $row3){
+                                    		echo $row3['name'];
+                                    	}
+                                    echo '</td>';
+                                echo '</tr>';
+                            }
+                            echo '</tr>';
+                    echo '</table>';
+                    //echo '<input type="submit" class="btn btn-danger" value="Eliminar"/>';
+
+                echo "<button type='button' class='btn btn-danger' data-toggle='modal' data-target='#exampleModal'>Eliminar</button>";
+                ?>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Eliminar usuario</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Esta seguro que quiere eliminarlo?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                    <input type="submit" class="btn btn-danger" value="Eliminar"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                        echo "</form>";
+                    ?>
                 </div>
             </div>
 		</div>
@@ -475,7 +554,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos
 	<script src="../js/owl.carousel.min.js"></script>
 	<script src="../js/circle-progress.min.js"></script>
 	<script src="../js/main.js"></script>
-	<script src="../js/formulario.js?v=1"></script>
 
     </body>
 </html>
