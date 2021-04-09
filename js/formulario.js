@@ -128,7 +128,7 @@ function registrarContactenos() {
 
     console.log(name);
     if(name == '' || correo == '' || Sujeto == '' || textoArea == ''){
-        alert("Diligencia los campos solicitados js");
+        alert("Diligencia los campos solicitados");
     }
     else{
         document.formInicio.action = 'vistasAdministrador/registrarContactenos.php';
