@@ -90,7 +90,7 @@ session_start();
 						</div>
 						<div class="hi-content">
 							<h6>3116194941</h6>
-							<p>Contactanos</p>
+							<p>Contactanos GermanInternational</p>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 hi-item">
