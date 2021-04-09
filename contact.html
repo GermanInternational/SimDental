@@ -127,12 +127,12 @@
 						</div>
 					</div>
 					<h3><p align="center">Inscribete si quieres el portafolios de servicios</p></h3>
-					<form class="contact-form">
-						<input type="text" placeholder="Nombre">
-						<input type="text" placeholder="E-mail">
-						<input type="text" placeholder="Sujeto">
-						<textarea placeholder="Texto"></textarea>
-						<button class="site-btn">Enviar</button>
+					<form class="contact-form" name="formInicio" method="post">
+						<input type="text" placeholder="Nombre" name="nombre" id="nombre">
+						<input type="text" placeholder="E-mail" name="correo" id="correo">
+						<input type="text" placeholder="Sujeto" name="Sujeto"id="Sujeto">
+						<textarea placeholder="Texto" name="textoArea" id="textoArea"></textarea>
+						<button type="submit" class="btn btn-primary" onclick="registrarContactenos();">Ingresar</button>
 					</form>
 				</div>
 			</div>
@@ -260,6 +260,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/circle-progress.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/formulario.js?v=4"></script>
 
 
 	

@@ -249,4 +249,12 @@ class Administrador
            return false;
        }
    }
+
+    public function insertarContactenos($name, $correo, $sujeto, $area){
+       $bd = new Conexion();
+       $sql = $bd->prepare("INSERT INTO `contactenos`(`nombre`, `correo`, `sujeto`, `texto`) VALUES ('$name','$correo','$sujeto','$area')");
+       $sql->execute();
+       return $bd->lastInsertId();
+   }
+
 }

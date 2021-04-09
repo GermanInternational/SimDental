@@ -119,3 +119,19 @@ function registrarTratamiento() {
         document.formInicio.submit();
     }
 }
+
+function registrarContactenos() {
+    var name = document.getElementById('nombre').value;
+    var correo = document.getElementById('correo').value;
+    var Sujeto = document.getElementById('Sujeto').value;
+    var textoArea = document.getElementById('textoArea').value;
+
+    console.log(name);
+    if(name == '' || correo == '' || Sujeto == '' || textoArea == ''){
+        alert("Diligencia los campos solicitados js");
+    }
+    else{
+        document.formInicio.action = 'vistasAdministrador/registrarContactenos.php';
+        document.formInicio.submit();
+    }
+}
