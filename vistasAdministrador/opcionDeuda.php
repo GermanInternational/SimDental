@@ -53,8 +53,15 @@ else{
         }
         else if ($_POST['tipoPlan']=='eliminarTratamiento'){
             //echo $_POST['idUser'];
-            $administrador->eliminarTramiento($_POST['idUser']);
-            header("Location: ../vistasAdministrador/eliminarTramiento.php");
+            if(isset($_POST['idUser'])){
+                $administrador->eliminarTramiento($_POST['idUser']);
+                header("Location: ../vistasAdministrador/eliminarTramiento.php");
+            }
+            else{
+                 header("Location: ../vistasAdministrador/eliminarTramientoBuscador.php?tratamiento=".$_POST['buscardoTratamiento']);
+                
+            }
+            
         }
     }  
     else{

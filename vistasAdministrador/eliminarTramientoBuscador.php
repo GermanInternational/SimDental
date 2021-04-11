@@ -328,7 +328,7 @@ include '../libreria/Administrador.php';
                 <div align="center">
                 <?php
                     $administrador = new Administrador();
-                    $rows = $administrador->listarTratamiento();
+                    $rows = $administrador->listarTratamientoConCondicion($_GET['tratamiento']);
                     echo '<form action="opcionDeuda.php" method="post">';
                     echo '<div class="form-group" align="RIGHT">';
 							 echo '<input type="text" name="buscardoTratamiento" class="form-control" style="width : 400px; heigth : 100px" placeholder="BuscardoTratamiento"/>';

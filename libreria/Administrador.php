@@ -257,4 +257,14 @@ class Administrador
        return $bd->lastInsertId();
    }
 
+    public function listarTratamientoConCondicion($buscardoTratamientos){
+       $bd = new Conexion();
+       $query = "SELECT `idDental_treatment`, `name`, `status`, `description`, `User_idUser`, `Doctor_idDoctor`, `type_debt_idtype_debt` FROM `dental_treatment` WHERE`name` like CONCAT('%', :var1, '%')";
+       $sql = $bd->prepare($query);
+       $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       $sql->execute(array(':var1' => $buscardoTratamientos));
+       $ok = $rows = $sql->fetchAll(PDO::FETCH_ASSOC);
+       return $rows;
+   }
+
 }
