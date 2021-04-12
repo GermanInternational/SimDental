@@ -11,8 +11,9 @@ class Administrador
 {
    public function ingresarUsuario($nombre, $apellido, $fecha, $email, $ciudad, $telefono, $contra, $privilegio, $tipo_documento, $documento){
        $bd = new Conexion();
+       $contrase=md5($contra);
        $sql = $bd->prepare("INSERT INTO `user`(`name`, `last_name`, `birth_date`, `address`, `City`, `phone`, `type_document`, `document`, `password`, `rol`, `status`)
-                                    VALUES ('$nombre','$apellido','$fecha','$email','$ciudad','$telefono','$tipo_documento','$documento','$contra','$privilegio','1')");
+                                    VALUES ('$nombre','$apellido','$fecha','$email','$ciudad','$telefono','$tipo_documento','$documento','$contrase','$privilegio','1')");
        $sql->execute();
        $idInsertado = $bd->lastInsertId();
        if($idInsertado){
