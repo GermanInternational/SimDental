@@ -267,4 +267,26 @@ class Administrador
        return $rows;
    }
 
+    public function eliminarPlan($idPlan){
+       $bd = new Conexion();
+       $sql = $bd->prepare("DELETE FROM `type_debt` WHERE `idtype_debt` = '$idPlan'");
+       $ok = $sql->execute();
+       if($ok){
+           return true;
+       }
+       else{
+           return false;
+       }
+   }
+
+    public function listarPlanConCondicion($buscardoPlan){
+       $bd = new Conexion();
+       $query = "SELECT `idtype_debt`, `name`, `value`, `share` FROM `type_debt` WHERE`name` like CONCAT('%', :var1, '%')";
+       $sql = $bd->prepare($query);
+       $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       $sql->execute(array(':var1' => $buscardoPlan));
+       $ok = $rows = $sql->fetchAll(PDO::FETCH_ASSOC);
+       return $rows;
+   }
+
 }

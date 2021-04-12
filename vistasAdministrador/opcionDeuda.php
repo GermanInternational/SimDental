@@ -27,6 +27,10 @@ if(isset($_POST['retornaFormularioDeuda'])){
         header("Location: ../vistasAdministrador/eliminarTramiento.php");
         //echo "entre por el 7";
     }
+     else if($_POST['opcion']==8){
+        header("Location: ../vistasAdministrador/eliminarPlan.php");
+        //echo "entre por el 8";
+    }
 }
 else{
     if(isset($_POST['tipoDeudaRegistrar'])){
@@ -62,6 +66,18 @@ else{
                 
             }
             
+        }
+        else if($_POST['tipoPlan']=='eliminarPlan'){
+             if(isset($_POST['idUser'])){
+                //echo "Entre en eliminarPlan pero con el if";
+                $administrador->eliminarPlan($_POST['idUser']);
+                header("Location: ../vistasAdministrador/eliminarPlan.php");
+            }
+            else{
+                //echo "Entre en eliminarPlan pero con el else";
+                 header("Location: ../vistasAdministrador/eliminarPlanBuscador.php?plan=".$_POST['buscardoPlan']);
+                
+            }
         }
     }  
     else{

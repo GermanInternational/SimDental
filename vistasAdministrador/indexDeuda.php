@@ -333,6 +333,7 @@ session_start();
                                         <option value="1">Ingresar plan</option>
                                         <option value="3">Listar planes</option>
                                         <option value="4">Modificar plan</option>
+                                        <option value="8">Eliminar plan</option>
                                         <option value="2">Ingresar el tratamiento</option>
                                         <option value="5">Listar tratamientos</option>
                                         <option value="6">Modificar tratamientos</option>

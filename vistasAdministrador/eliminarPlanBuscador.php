@@ -328,10 +328,12 @@ include '../libreria/Administrador.php';
                 <div align="center">
                 <?php
                     $administrador = new Administrador();
-                    $rows = $administrador->listarTratamiento();
+                    $rows = $administrador->listarPlanConCondicion($_GET['plan']);
                     echo '<form action="opcionDeuda.php" method="post">';
                     echo '<div class="form-group" align="RIGHT">';
-							 echo '<input type="text" name="buscardoTratamiento" class="form-control" style="width : 400px; heigth : 100px" placeholder="BuscardoTratamiento"/>';
+							 echo '<input type="text" name="buscardoPlan" class="form-control" style="width : 400px; heigth : 100px" placeholder="BuscardoPlan"/>';
+							  echo "<input type='hidden' id='tipoDeudaRegistrar' name='tipoDeudaRegistrar' value=''>";
+                					echo "<input type='hidden' name='tipoPlan' value='eliminarPlan'>";
 					echo '</div>';
                     echo '<table class="table">';
                             echo '<tr>';
@@ -342,63 +344,27 @@ include '../libreria/Administrador.php';
                                     echo 'Nombre';
                                 echo '</td>';
                                 echo '<td>';
-                                    echo 'Estado';
+                                    echo 'Valor';
                                 echo '</td>';
                                 echo '<td>';
-                                    echo 'Descripcion';
-                                echo '</td>';
-                                echo '<td>';
-                                    echo 'Usuario';
-                                echo '</td>';
-                                echo '<td>';
-                                    echo 'Doctor';
-                                echo '</td>';
-                                echo '<td>';
-                                    echo 'Nombre tramiento';
+                                    echo 'Cuota';
                                 echo '</td>';
                             foreach ($rows as $row) {
-                                $idUser = $row['idDental_treatment'];
+                                $idUser = $row['idtype_debt'];
                                 echo '<tr>';
                                     echo '<td>';
                                         echo "<input type='checkbox' name='idUser' class='form-check-input' id='exampleCheck1' value='$idUser'>";
                                      echo "<input type='hidden' id='tipoDeudaRegistrar' name='tipoDeudaRegistrar' value=''>";
-                					echo "<input type='hidden' name='tipoPlan' value='eliminarTratamiento'>";
+                					echo "<input type='hidden' name='tipoPlan' value='eliminarPlan'>";
                                     echo '</td>';
                                     echo '<td>';
                                         echo $row['name'];
                                     echo '</td>';
                                     echo '<td>';
-                                        if($row['status'] == 1){
-                                            echo 'Activo';
-                                        }
-                                        elseif($row['status'] == 2){
-                                            echo 'Inactivo';
-                                        }
-                                        else{
-                                            echo 'Terminado';
-                                        }
+                                        echo $row['value'];
                                     echo '</td>';
                                     echo '<td>';
-                                        echo $row['description'];
-                                    echo '</td>';
-                                    echo '<td>';
-                                    	$rows1 = $administrador->listarUsuarioConId($row['User_idUser']);
-                                    	foreach ($rows1 as $row1){
-                                    		echo $row1['name'].''.$row1['last_name'];
-                                    	}
-                                    echo '</td>';
-                                    echo '<td>';
-                                        $rows2 = $administrador->listarDoctoresConId($row['Doctor_idDoctor']);
-                                    	foreach ($rows2 as $row2){
-                                    		echo $row2['name'].''.$row2['last_name'];
-                                    	}
-                                    echo '</td>';
-                                     echo '<td>';
-                                        //echo $row['type_debt_idtype_debt'];
-                                         $rows3 = $administrador->listaTipoTramiento($row['type_debt_idtype_debt']);
-                                    	foreach ($rows3 as $row3){
-                                    		echo $row3['name'];
-                                    	}
+                                        echo $row['share'];
                                     echo '</td>';
                                 echo '</tr>';
                             }
@@ -412,7 +378,7 @@ include '../libreria/Administrador.php';
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Tratamiento</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Eliminar plan</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
