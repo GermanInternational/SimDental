@@ -54,6 +54,7 @@ session_start();
 				<li class="active"><a href="indexAdministrador.php">Incio</a></li>
 				<li><a href="usuarioAdministrador.php">Usuario</a></li>
 				<li><a href="indexDeuda.php">Accion deuda</a></li>
+				<li><a href="nosotrosM_V.php">Nosotros V/M</a></li>
                 <li><a href="logout.php">Cerrar Sesion</a></li>
                 <?php
                     if (!isset($_SESSION["nombre"])){

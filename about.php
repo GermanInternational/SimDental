@@ -1,3 +1,8 @@
+<?php
+session_start();
+include 'libreria/Administrador.php';
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -124,25 +129,39 @@
 					<div class="featured-box spad">
 						<div class="feature-item">
 							<i class="flaticon-008-protection"></i>
+							<?php
+								$administrador = new Administrador();
+                    			$rows = $administrador->nosotros();
+							?>
 							<div class="fi-content">
-								<h4>Affordable Care</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper venenatis turpis eget suscipit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eu nulla sollicitudin, vestibulum.</p>
+								<h4>Mision</h4>
+								<p align="justify">
+									<?php
+										foreach ($rows as $row){
+											echo $row['Mision'];
+										}
+									?>
+								</p>
 							</div>
 						</div>
 						<div class="feature-item">
 							<i class="flaticon-018-dentist-1"></i>
 							<div class="fi-content">
-								<h4>Amazing Team</h4>
-								<p>Ipsum dolor sit amet, consectetur adipiscing elit. Duis semper venenatis turpis eget suscipit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eu nulla sollicitudin, vestibulum.</p>
+								<h4>Vision</h4>
+								<p align="justify"><?php
+										foreach ($rows as $row){
+											echo $row['Vision'];
+										}
+									?></p>
 							</div>
 						</div>
-						<div class="feature-item">
+						<!--<div class="feature-item">
 							<i class="flaticon-007-computer-1"></i>
 							<div class="fi-content">
 								<h4>The best equipment</h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper venenatis turpis eget suscipit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eu nulla sollicitudin, vestibulum.</p>
 							</div>
-						</div>
+						</div>-->
 					</div>
 				</div>
 			</div>
@@ -156,7 +175,7 @@
 	<section class="doctors-section spad">
 		<div class="container">
 			<div class="section-title text-center">
-				<h2>The Doctors</h2>
+				<h2>Los Doctores</h2>
 			</div>
 			<div class="row">
 				<div class="col-lg-4">

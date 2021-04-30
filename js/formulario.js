@@ -135,3 +135,18 @@ function registrarContactenos() {
         document.formInicio.submit();
     }
 }
+
+function formularioNosotros() {
+    var mision = document.getElementById('exampleInputMision').value;
+    var vision = document.getElementById('exampleInputVision').value;
+
+    if(mision == '' || vision == ''){
+        alert('Debe ingresar los campos solicitados');
+        location.href="../vistasAdministrador/nosotrosM_V.php";
+    }
+    else {
+        //document.getElementById('tipoDeudaRegistrar').value= 'registrarTratamiento';
+        document.formInicio.action = '../vistasAdministrador/nosotrosM_VIngresar.php';
+        document.formInicio.submit();
+    }
+}

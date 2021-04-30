@@ -55,6 +55,7 @@ include '../libreria/Administrador.php';
 				<li><a href="../vistasAdministrador/indexAdministrador.php">Incio</a></li>
 				<li><a href="usuarioAdministrador.php">Usuario</a></li>
                 <li class="active"><a href="indexDeuda.php">Accion deuda</a></li>
+                <li><a href="nosotrosM_V.php">Nosotros V/M</a></li>
                 <li><a href="logout.php">Cerrar Sesion</a></li>
                 <?php
                     if (!isset($_SESSION["nombre"])){

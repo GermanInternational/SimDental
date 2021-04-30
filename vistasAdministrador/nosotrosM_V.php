@@ -1,3 +1,8 @@
+<?php
+session_start();
+include '../libreria/Administrador.php';
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -6,20 +11,20 @@
 	<meta name="description" content="ProDent dentist template">
 	<meta name="keywords" content="prodent, dentist, creative, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Favicon -->   
+	<!-- Favicon -->
 	<!--<link href="img/favicon.ico" rel="shortcut icon"/>-->
-	<link href="img/logo1.PNG" rel="shortcut icon"/>
+	<link href="../img/logo1.PNG" rel="shortcut icon"/>
 
-	<!-- Google Font -->   
+	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/flaticon.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
-	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="../css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="../css/flaticon.css"/>
+	<link rel="stylesheet" href="../css/owl.carousel.css"/>
+	<link rel="stylesheet" href="../css/style.css"/>
+	<link rel="stylesheet" href="../css/animate.css"/>
 
 
 	<!--[if lt IE 9]>
@@ -33,13 +38,13 @@
 	<div id="preloder">
 		<div class="loader"></div>
 	</div>
-	
+
 	<!-- Header section -->
 	<header class="header-section">
 		<div class="container">
 			<!-- Site Logo -->
-			<a href="index.html" class="site-logo">
-				<img src="img/logo1.PNG" alt="" height="60" width="140">
+			<a href="indexAdministrador.php" class="site-logo">
+				<img src="../img/logo1.PNG" alt="" height="60" width="140">
 			</a>
 			<!-- responsive -->
 			<div class="nav-switch">
@@ -47,12 +52,16 @@
 			</div>
 			<!-- Main Menu -->
 			<ul class="main-menu">
-				<li class="active"><a href="index.html">Incio</a></li>
-				<li><a href="about.php">Nosotros</a></li>
-				<li><a href="service.html">Servicio</a></li>
-				<li><a href="sesion.html">Sesion</a></li>
-				<!--<li><a href="blog.html">Blog</a></li>-->
-				<li><a href="contact.html">Contactenos</a></li>
+				<li><a href="../vistasAdministrador/indexAdministrador.php">Incio</a></li>
+				<li><a href="usuarioAdministrador.php">Usuario</a></li>
+                <li><a href="indexDeuda.php">Accion deuda</a></li>
+                <li class="active"><a href="nosotrosM_V.php">Nosotros V/M</a></li>
+                <li><a href="logout.php">Cerrar Sesion</a></li>
+                <?php
+                    if (!isset($_SESSION["nombre"])){
+                        header('Location: ../index.html');
+                    }
+                ?>
 				<!--<li><a href="elements.html"><i class="flaticon-020-decay"></i></a></li>-->
 			</ul>
 		</div>
@@ -61,7 +70,7 @@
 				<div class="row">
 					<div class="col-lg-3 col-md-6 hi-item">
 						<div class="hs-icon">
-							<img src="img/icons/map-marker.png" alt="">
+							<img src="../img/icons/map-marker.png" alt="">
 						</div>
 						<div class="hi-content">
 							<h6>Servicio dental</h6>
@@ -70,7 +79,7 @@
 					</div>
 					<div class="col-lg-3 col-md-6 hi-item">
 						<div class="hs-icon">
-							<img src="img/icons/clock.png" alt="">
+							<img src="../img/icons/clock.png" alt="">
 						</div>
 						<div class="hi-content">
 							<h6>Horarios</h6>
@@ -79,16 +88,16 @@
 					</div>
 					<div class="col-lg-3 col-md-6 hi-item">
 						<div class="hs-icon">
-							<img src="img/icons/phone.png" alt="">
+							<img src="../img/icons/phone.png" alt="">
 						</div>
 						<div class="hi-content">
 							<h6>3116194941</h6>
-							<p>Contactanos GermanInternational</p>
+							<p>Contactanos</p>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 hi-item">
 						<div class="hs-icon">
-							<img src="img/icons/calendar.png" alt="">
+							<img src="../img/icons/calendar.png" alt="">
 						</div>
 						<div class="hi-content">
 							<h6>Pide tu cita</h6>
@@ -101,18 +110,17 @@
 	</header>
 	<!-- Header section end -->
 
-                                                
+
 	<!-- Hero section -->
 	<section class="hero-section">
 		<div class="hero-slider owl-carousel">
 			<!-- item -->
-			<div class="hs-item set-bg text-white" data-setbg="img/slide-1.jpg">
+			<div class="hs-item set-bg text-white" data-setbg="../img/slide-1.jpg">
 				<div class="container">
 					<div class="row">
 						<div class="col-xl-7">
-							<h2>El servicio se ofrece con amor</h2>
-							<p>Empresa constutida para brindar los mejores servicios para la mejor calidad.</p>
-							<a href="service.html" class="site-btn">Servicios</a>
+							<h2>Bienvenido Administrador</h2>
+							<p>Administrador <?php echo $_SESSION["nombre"] ?></p>
 						</div>
 					</div>
 				</div>
@@ -139,11 +147,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 banner-text text-white">
-					<h4>Nosotros</h4>
-					<p>Si quieres saber mas de nosotros</p>
+					<!--<h4>Nosotros</h4>-->
+					<!--<p>Si quieres saber mas de nosotros</p>-->
 				</div>
 				<div class="col-lg-5 text-lg-right">
-					<a href="about.html" class="site-btn sb-light">Nosotros</a>
+					<!--<a href="about.html" class="site-btn sb-light">Nosotros</a>-->
 				</div>
 			</div>
 		</div>
@@ -153,25 +161,39 @@
 
 
 	<!-- About section -->
-	<section class="about-section spad">
+	<!--<section class="about-section spad">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-5">
 					<img src="img/yo.jpg" alt="" height="" width="350">
 				</div>
 				<div class="col-lg-7 about-text">
-					<h2>Gerente y creador de la compañia</h2>
+					<h2>Creador de aplicativo</h2>
 					<p>- Ingeniero de sistemas y Telecomunicaciones</p>
 					<p>- Especialista en Metodologias de la calidad para el desarrolo de software</p>
 					<p>- Manejo de diferentes lenguajes programacion</p>
-					<p>- Diplomado en lenguajes web y aplicativos moviles</p>
+					<p>- Diplomado en lenguajs web y aplicativos moviles</p>
 					<p>- Diplomado en docencia universitaria</p>
-					<!--<img src="img/awards.jpg" alt="">-->
+					<img src="img/awards.jpg" alt="">
 				</div>
 			</div>
 		</div>
-	</section>
+	</section>-->
 	<!-- About section end -->
+
+    <section class="banner-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 banner-text text-white">
+                    <!--<h4>Nosotros</h4>-->
+                    <!--<p>Si quieres saber mas de nosotros</p>-->
+                </div>
+                <div class="col-lg-5 text-lg-right">
+                    <!--<a href="about.html" class="site-btn sb-light">Nosotros</a>-->
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 	<!-- Facts section -->
@@ -298,48 +320,35 @@
 	<section class="testimonials-section spad">
 		<div class="container">
 			<div class="section-title text-center">
-				<h2>Equipo de trabajo</h2>
+				<h2>Ingresar Mision y Vision</h2>
 			</div>
 		</div>
+		<?php
+			$administrador = new Administrador();
+			$rows = $administrador->nosotros();
+		?>
 		<div class="testimonials-warp">
-			<div class="testimonials-slider owl-carousel">
-				<div class="testimonial-item">
-					<div class="ts-content">
-						<div class="quta">“</div>
-						<p>Ingeniero en Sistemas y Telecomunicaciones</p>
-						<h6>Ricardo Arturo Torres Manrique</h6>
-						<span>Equipo de trabajo</span>
-					</div>
-					<div class="author-pic set-bg" data-setbg="img/review/Ricardo.jpg"></div>
-				</div>
-				<div class="testimonial-item">
-					<!--<div class="ts-content">
-						<div class="quta">“</div>
-						<p>Nullam lorem sem, viverra a rutrum sed, gravida mattis magna. Suspendisse vitae commodo quam. Quisque a enim et ante vulputate finibus.</p>
-						<h6>Jessica Brown</h6>
-						<span>Pacient</span>
-					</div>
-					<div class="author-pic set-bg" data-setbg="img/review/2.jpg"></div>-->
-				</div>
-				<!--<div class="testimonial-item">
-					<div class="ts-content">
-						<div class="quta">“</div>
-						<p>Phasellus vehicula tempus orci vel consequat. Nullam lorem sem, viverra a rutrum sed, gravida mattis magna. Suspendisse vitae commodo quam. Quisque a enim et ante vulputate finibus nec laoreet ipsum.</p>
-						<h6>Jessica Brown</h6>
-						<span>Pacient</span>
-					</div>
-					<div class="author-pic set-bg" data-setbg="img/review/3.jpg"></div>
-				</div>-->
-				<!--<div class="testimonial-item">
-					<div class="ts-content">
-						<div class="quta">“</div>
-						<p>Tempus orci vel consequat. Nullam lorem sem, viverra a rutrum sed, gravida mattis magna. Suspendisse vitae commodo quam. Quisque a enim et ante vulputate finibus.</p>
-						<h6>Jessica Brown</h6>
-						<span>Pacient</span>
-					</div>
-					<div class="author-pic set-bg" data-setbg="img/review/2.jpg"></div>
-				</div>-->
-			</div>
+                <form name="formInicio" method="post">
+                    <div class="form-group">
+                        <label for="exampleInputNombre">Mision</label>
+                        <?php
+                        	foreach ($rows as $row){
+                       			echo "<input type='text' name='Mision' class='form-control' id='exampleInputMision' aria-describedby='misionHelp' value='".$row['Mision']."'>";
+                       		}
+                       	?>
+                        <small id="exampleInputMision" class="form-text text-muted">Ingrese la Misino completo con el cual va a quedar el usuario</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputVision">Vision</label>
+                        <?php
+                        	foreach ($rows as $row){
+                        		echo "<input type='text' name='Vision' class='form-control' id='exampleInputVision' aria-describedby='visionHelp' value='".$row['Vision']."'>";
+                        	}
+                        ?>
+                        <small id="exampleInputApellido" class="form-text text-muted">Ingrese la vision con el cual va a quedar el nosotros</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="formularioNosotros();">Ingresar</button>
+                </form>
 		</div>
 	</section>
 	<!-- Testimonials section end -->
@@ -367,7 +376,7 @@
 
 
 	<!-- Footer top section -->
-	<section class="footer-top-section set-bg" data-setbg="img/footer-bg.jpg">
+<!--	<section class="footer-top-section set-bg" data-setbg="img/footer-bg.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4">
@@ -389,15 +398,14 @@
 				<div class="col-lg-3 col-md-5">
 					<div class="footer-widget">
 						<div class="fw-links">
-							<h5 class="fw-title">Menu</h5>
+							<h5 class="fw-title">Our Services</h5>
 							<ul>
-								<li><a href="index.html">Incio</a></li>
-								<li><a href="about.html">Nosotros</a></li>
-								<li><a href="service.html">Servicio</a></li>
-								<li><a href="sesion.html">Sesion</a></li>
-								<!--<li><a href="blog.html">Blog</a></li>-->
-								<li><a href="contact.html">Contactenos</a></li>
-								<!--<li><a href="elements.html"><i class="flaticon-020-decay"></i></a></li>-->
+								<li><a href="">Dental Implants</a></li>
+								<li><a href="">Braces</a></li>
+								<li><a href="">Visdon Theet</a></li>
+								<li><a href="">Porcelain Veneers</a></li>
+								<li><a href="">Teeth Whitening</a></li>
+								<li><a href="">Dental Bridges</a></li>
 							</ul>
 						</div>
 					</div>
@@ -405,28 +413,32 @@
 				<div class="col-lg-5 col-md-7">
 					<div class="footer-widget">
 						<div class="fw-timetable">
-							<div class="fw-title"><p align="center">Atencion al Cliente GermanInternational</p></div>
+							<div class="fw-title">Opening Hours</div>
 							<div class="timetable-content">
 								<table>
 									<tr>
-										<td>Lunes</td>
-										<td>8:00am - 12:00pm y 2:00 - 6:00</td>
+										<td>Monday</td>
+										<td>8:00am - 12:00pm</td>
 									</tr>
 									<tr>
-										<td>Martes</td>
-										<td>8:00am - 12:00pm y 2:00 - 6:00</td>
+										<td>Tuesday</td>
+										<td>8:00am - 12:00pm</td>
 									</tr>
 									<tr>
-										<td>Miercoles</td>
-										<td>8:00am - 12:00pm y 2:00 - 6:00</td>
+										<td>Wednesday</td>
+										<td>8:00am - 12:00pm</td>
 									</tr>
 									<tr>
-										<td>Jueves</td>
-										<td>8:00am - 12:00pm y 2:00 - 6:00</td>
+										<td>Thursday</td>
+										<td>8:00am - 12:00pm</td>
 									</tr>
 									<tr>
-										<td>Viernes</td>
-										<td>8:00am - 12:00pm y 2:00 - 6:00</td>
+										<td>Friday</td>
+										<td>8:00am - 12:00pm</td>
+									</tr>
+									<tr>
+										<td>Sunday</td>
+										<td>8:00am - 12:00pm</td>
 									</tr>
 								</table>
 							</div>
@@ -435,7 +447,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section>-->
 	<!-- Footer top section end -->
 
 
@@ -455,14 +467,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos
 		</div>
 	</footer>
 	<!-- Footer top section end -->
-                                                
+
 
 	<!--====== Javascripts & Jquery ======-->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/circle-progress.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/circle-progress.min.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="../js/formulario.js?v=2"></script>
 
     </body>
 </html>
+
+

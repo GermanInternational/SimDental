@@ -289,4 +289,21 @@ class Administrador
        return $rows;
    }
 
+    public function nosotros(){
+       $bd = new Conexion();
+       $query = "SELECT `Mision`, `Vision` FROM `nosotros` where `id` = 1";
+       $sql = $bd->prepare($query);
+       $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       $sql->execute(array());
+       $ok = $rows = $sql->fetchAll(PDO::FETCH_ASSOC);
+       return $rows;
+   }
+
+   public function ActualizarMisionYVision($Mision, $Vision){
+       $bd = new Conexion();
+       $sql = $bd->prepare("UPDATE `nosotros` SET `Mision`='$Mision',`Vision`='$Vision' where id = 1");
+       $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       $sql->execute();
+   }
+
 }
