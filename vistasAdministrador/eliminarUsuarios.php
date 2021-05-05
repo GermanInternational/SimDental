@@ -331,7 +331,7 @@ include '../libreria/Administrador.php';
                     $rows = $administrador->listarUsuario();
                     echo '<form action="opcionUsuario.php" method="post">';
                     echo '<div class="form-group" align="RIGHT">';
-							 echo '<input type="text" name="buscardoPlan" class="form-control" style="width : 400px; heigth : 100px" placeholder="BuscardoPlan"/>';
+							 echo '<input type="text" name="buscardoUsuario" class="form-control" style="width : 400px; heigth : 100px" placeholder="BuscardoUsuario"/>';
 							  echo "<input type='hidden' id='tipoDeudaRegistrar' name='tipoDeudaRegistrar' value=''>";
                 					echo "<input type='hidden' name='tipoPlan' value='eliminarPlan'>";
 					echo '</div>';
