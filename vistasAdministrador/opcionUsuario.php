@@ -74,7 +74,21 @@ else{
                 header('Location: eliminarUsuariosConTratamiento.php');
             }
         }
-        header('Location: eliminarUsuarios.php');
+        else if($_POST['tipoUsuario']=='eliminarUsuario'){
+            var_dump($_POST['tipoUsuario']);
+                if(isset($_POST['idUser'])){
+                    
+                    //echo "Entre en eliminarPlan pero con el if";
+                    $administrador->eliminarUsuario($_POST['idUser']);
+                    //header("Location: ../vistasAdministrador/eliminarUsuarios.php");
+                }
+            else{
+                //echo "Entre en eliminarUsuario pero con el else";
+                 header("Location: ../vistasAdministrador/eliminarUsuarioBuscador.php?Usuario=".$_POST['buscardoUsuario']);
+                
+            }
+        }
+        //header('Location: eliminarUsuarios.php');
     }
 }
 

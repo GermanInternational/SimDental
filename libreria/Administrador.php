@@ -11,8 +11,9 @@ class Administrador
 {
    public function ingresarUsuario($nombre, $apellido, $fecha, $email, $ciudad, $telefono, $contra, $privilegio, $tipo_documento, $documento){
        $bd = new Conexion();
+       $contrase=md5($contra);
        $sql = $bd->prepare("INSERT INTO `user`(`name`, `last_name`, `birth_date`, `address`, `City`, `phone`, `type_document`, `document`, `password`, `rol`, `status`)
-                                    VALUES ('$nombre','$apellido','$fecha','$email','$ciudad','$telefono','$tipo_documento','$documento','$contra','$privilegio','1')");
+                                    VALUES ('$nombre','$apellido','$fecha','$email','$ciudad','$telefono','$tipo_documento','$documento','$contrase','$privilegio','1')");
        $sql->execute();
        $idInsertado = $bd->lastInsertId();
        if($idInsertado){
@@ -304,6 +305,28 @@ class Administrador
        $sql = $bd->prepare("UPDATE `nosotros` SET `Mision`='$Mision',`Vision`='$Vision' where id = 1");
        $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
        $sql->execute();
+   }
+   /*
+   public function eliminarUsuario($idUsuario){
+       $bd = new Conexion();
+       $sql = $bd->prepare("DELETE FROM `user` WHERE `idUser` = '$idUsuario'");
+       $ok = $sql->execute();
+       if($ok){
+           return true;
+       }
+       else{
+           return false;
+       }
+   }
+   */
+   public function listarUsuarioConCondicion($buscardoUsuario){
+       $bd = new Conexion();
+       $query = "SELECT `idUser`,`name`,`last_name`,`birth_date`,`address`,`City`,`phone`,`type_document`,`document`,`password`,`rol`,`status` FROM `user` WHERE `name` like CONCAT('%', :var1, '%')";
+       $sql = $bd->prepare($query);
+       $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       $sql->execute(array(':var1' => $buscardoUsuario));
+       $ok = $rows = $sql->fetchAll(PDO::FETCH_ASSOC);
+       return $rows;
    }
 
 }
