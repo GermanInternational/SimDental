@@ -305,5 +305,27 @@ class Administrador
        $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
        $sql->execute();
    }
+   /*
+   public function eliminarUsuario($idUsuario){
+       $bd = new Conexion();
+       $sql = $bd->prepare("DELETE FROM `user` WHERE `idUser` = '$idUsuario'");
+       $ok = $sql->execute();
+       if($ok){
+           return true;
+       }
+       else{
+           return false;
+       }
+   }
+   */
+   public function listarUsuarioConCondicion($buscardoUsuario){
+       $bd = new Conexion();
+       $query = "SELECT `idUser`,`name`,`last_name`,`birth_date`,`address`,`City`,`phone`,`type_document`,`document`,`password`,`rol`,`status` FROM `user` WHERE `name` like CONCAT('%', :var1, '%')";
+       $sql = $bd->prepare($query);
+       $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       $sql->execute(array(':var1' => $buscardoUsuario));
+       $ok = $rows = $sql->fetchAll(PDO::FETCH_ASSOC);
+       return $rows;
+   }
 
 }

@@ -328,11 +328,10 @@ include '../libreria/Administrador.php';
                 <div align="center"> 
                 <?php
                     $administrador = new Administrador();
-                    $rows = $administrador->listarUsuario();
+                    	$rows = $administrador->listarUsuarioConCondicion($_GET['Usuario']);
                     echo '<form action="opcionUsuario.php" method="post">';
                     echo '<div class="form-group" align="RIGHT">';
-							 echo '<input type="text" name="buscardoUsuario" class="form-control" style="width : 400px; heigth : 100px" placeholder="BuscandoUsuario"/>';
-							  echo "<input type='hidden' id='tipoDeudaRegistrar' name='tipoDeudaRegistrar' value=''>";
+							 echo '<input type="text" name="buscardoUsuario" class="form-control" style="width : 400px; heigth : 100px" placeholder="BuscardoUsuario"/>';
                 					echo "<input type='hidden' name='tipoUsuario' value='eliminarUsuario'>";
 					echo '</div>';
                     echo '<table class="table">';
