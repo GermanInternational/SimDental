@@ -17,7 +17,8 @@ class Metodo
 
     public function verificarSesion($nombre, $password){
         $bd = new Conexion();
-        $sql= $bd->prepare("SELECT name, password, rol, idUser, status FROM `user` WHERE `name` = '$nombre' AND `password` = '$password'");
+        $pass=md5($password);
+        $sql= $bd->prepare("SELECT name, password, rol, idUser, status FROM `user` WHERE `name` = '$nombre' AND `password` = '$pass'");
         $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql->execute(array());
         $rows = $sql->fetchAll(PDO::FETCH_ASSOC);
