@@ -74,7 +74,7 @@ else{
                 header('Location: eliminarUsuariosConTratamiento.php');
             }
         }
-        //header('Location: eliminarUsuarios.php');
+        header('Location: eliminarUsuarios.php');
     }
 }
 
