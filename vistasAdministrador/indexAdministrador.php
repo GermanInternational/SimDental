@@ -55,6 +55,7 @@ session_start();
 				<li><a href="usuarioAdministrador.php">Usuario</a></li>
 				<li><a href="indexDeuda.php">Accion deuda</a></li>
 				<li><a href="nosotrosM_V.php">Nosotros V/M</a></li>
+				<li><a href="servicio_partes.php">Servicios</a></li>
                 <li><a href="logout.php">Cerrar Sesion</a></li>
                 <?php
                     if (!isset($_SESSION["nombre"])){
