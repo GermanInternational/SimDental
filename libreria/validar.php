@@ -8,6 +8,7 @@ $contra = $_POST['contraseña'];
 $metodo = new Metodo();
 
 $result = $metodo->verificarSesion($nombre, $contra);
+//var_dump($result);
 
 if($result){
     foreach ($result as $item){
@@ -20,14 +21,13 @@ if($result){
             if($_SESSION["rol"] == 1){
                 header('Location: ../vistasAdministrador/indexAdministrador.php');
             }
-            else{
-
+            else if($_SESSION["rol"] == 2){
+                header('Location: ../vistasDoctor/indexDoctor.php');
             }
         }
         else{
             header('Location: ../sesionInactivo.html');
         }
-
     }
 }
 else{
