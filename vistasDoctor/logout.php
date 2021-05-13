@@ -7,3 +7,5 @@ unset($_SESSION["rol"]);
 
 session_destroy();
 header('Location: ../index.html');
+
+?>
